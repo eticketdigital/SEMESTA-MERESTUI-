@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SEMESTA MERESTUI FESTIVAL</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#222;
+}
+
+/* HEADER */
+
+.header{
+    background:#fff;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#ff6b00;
+}
+
+.lang{
+    font-weight:600;
+}
+
+/* STEP */
+
+.step-wrap{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:#fff;
+    margin-bottom:15px;
+}
+
+.step{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.step-circle{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:#ddd;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.step.active .step-circle{
+    background:#ff6b00;
+    color:#fff;
+}
+
+.step-text{
+    font-size:12px;
+    margin-top:6px;
+}
+
+.arrow{
+    margin:0 12px;
+    font-size:20px;
+    color:#999;
+}
+
+/* CONTAINER */
+
+.container{
+    padding:15px;
+    max-width:700px;
+    margin:auto;
+}
+
+/* BANNER */
+
+.banner{
+    width:100%;
+    border-radius:14px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.banner img{
+    width:100%;
+    display:block;
+}
+
+/* TITLE */
+
+.event-title{
+    font-size:26px;
+    font-weight:700;
+    margin:18px 0;
+}
+
+/* TICKET CARD */
+
+.ticket-card{
+    background:#fff;
+    border-radius:15px;
+    padding:18px;
+    margin-bottom:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.ticket-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.ticket-name{
+    font-size:17px;
+    font-weight:700;
+}
+
+.status{
+    font-size:12px;
+    font-weight:700;
+    padding:6px 10px;
+    border-radius:20px;
+}
+
+.sale{
+    background:#e7fff1;
+    color:#00a651;
+}
+
+.soldout{
+    background:#ffe5e5;
+    color:#d80000;
+}
+
+.price{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.select-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#ff6b00;
+    color:#fff;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.sold-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#d9d9d9;
+    color:#777;
+    font-size:15px;
+    font-weight:700;
+    cursor:not-allowed;
+}
+
+.qty-box{
+    display:none;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+.qty-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#ff6b00;
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.qty-number{
+    font-size:20px;
+    font-weight:700;
+    min-width:30px;
+    text-align:center;
+}
+
+/* FOOTER */
+
+.footer{
+    margin-top:30px;
+    background:#1f1f1f;
+    color:#fff;
+    text-align:center;
+    padding:25px 15px;
+}
+
+.footer-logo{
+    font-size:24px;
+    font-weight:700;
+    color:#ff6b00;
+    margin-bottom:8px;
+}
+
+.footer p{
+    font-size:13px;
+    color:#ccc;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+    <div class="logo">Artatix</div>
+    <div class="lang">🇮🇩 ID</div>
+</div>
+
+<!-- STEP -->
+
+<div class="step-wrap">
+
+    <div class="step active">
+        <div class="step-circle">1</div>
+        <div class="step-text">Pilih Kategori</div>
+    </div>
+
+    <div class="arrow">›</div>
+
+    <div class="step">
+        <div class="step-circle">2</div>
+    </div>
+
+    <div class="arrow">›</div>
+
+    <div class="step">
+        <div class="step-circle">3</div>
+    </div>
+
+    <div class="arrow">›</div>
+
+    <div class="step">
+        <div class="step-circle">4</div>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <!-- BANNER -->
+
+    <div class="banner">
+        <img src="banner12.png" alt="Banner Event">
+    </div>
+
+    <h2 class="event-title">
+        SEMESTA MERESTUI FESTIVAL
+    </h2>
+
+    <!-- FESTIVAL PRESALE -->
+
+    <div class="ticket-card">
+
+        <div class="ticket-header">
+            <div class="ticket-name">
+                FESTIVAL PRESALE
+            </div>
+
+            <div class="status sale">
+                ON SALE
+            </div>
+        </div>
+
+        <div class="price">
+            Rp.119.000
+        </div>
+
+        <button class="select-btn" onclick="showQty('festival')">
+            Pilih Tiket
+        </button>
+
+        <div class="qty-box" id="festival">
+            <button class="qty-btn" onclick="changeQty('festivalNum',-1)">−</button>
+            <div class="qty-number" id="festivalNum">1</div>
+            <button class="qty-btn" onclick="changeQty('festivalNum',1)">+</button>
+        </div>
+
+    </div>
+
+    <!-- VIP PRESALE 1 -->
+
+    <div class="ticket-card">
+
+        <div class="ticket-header">
+            <div class="ticket-name">
+                VIP PRESALE 1
+            </div>
+
+            <div class="status soldout">
+                SOLD OUT
+            </div>
+        </div>
+
+        <div class="price">
+            Rp.235.000
+        </div>
+
+        <button class="sold-btn">
+            SOLD OUT
+        </button>
+
+    </div>
+
+    <!-- VIP PRESALE 2 -->
+
+    <div class="ticket-card">
+
+        <div class="ticket-header">
+            <div class="ticket-name">
+                VIP PRESALE 2
+            </div>
+
+            <div class="status sale">
+                ON SALE
+            </div>
+        </div>
+
+        <div class="price">
+            Rp.300.000
+        </div>
+
+        <button class="select-btn" onclick="showQty('vip2')">
+            Pilih Tiket
+        </button>
+
+        <div class="qty-box" id="vip2">
+            <button class="qty-btn" onclick="changeQty('vip2Num',-1)">−</button>
+            <div class="qty-number" id="vip2Num">1</div>
+            <button class="qty-btn" onclick="changeQty('vip2Num',1)">+</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+    <div class="footer-logo">Artatix</div>
+    <p>© 2026 Artatix. All Rights Reserved.</p>
+</div>
+
+<script>
+function showQty(id){
+    const box = document.getElementById(id);
+    const button = box.previousElementSibling;
+
+    button.style.display = "none";
+    box.style.display = "flex";
+}
+
+function changeQty(id,value){
+    let qty = document.getElementById(id);
+    let current = parseInt(qty.innerText);
+
+    current += value;
+
+    if(current < 1){
+        current = 1;
+    }
+
+    qty.innerText = current;
+}
+</script>
+
+</body>
+</html>
